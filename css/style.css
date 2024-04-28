@@ -4,11 +4,11 @@
 @import url("https://fonts.googleapis.com/css?family=Mulish:300,regular,600&display=swap");
 @font-face {
   font-family: "Rosewind";
-  src: url("/fonts/rosewind/rosewind.woff") format("woff");
+  src: url(/fonts/rosewind/Rosewind-Regular.otf);
 }
-/* ================================================================================ */
 body {
   font-family: "Mulish";
+  background-color: #000;
 }
 .wrapper {
   min-height: 100%;
@@ -39,6 +39,7 @@ body {
 /* ================================================================================ */
 /* ======================================== Header ======================================== */
 .header {
+  background-color: #fff;
 }
 .header__container {
   display: flex;
@@ -48,6 +49,8 @@ body {
   /* padding-top: 10px; */
 }
 .header__logo {
+  position: relative;
+  z-index: 2;
   padding-right: 25px;
 }
 .header__menu {
@@ -71,12 +74,12 @@ body {
 .menu__link {
   font-weight: 400;
   font-size: 20px;
-  /* line-height: 1.55; */
+  line-height: 1.55;
   color: #262323;
 }
 .header__logo {
   position: relative;
-  z-index: 10;
+  z-index: 5;
 }
 .icon-menu {
   display: none;
@@ -91,7 +94,7 @@ body {
     flex: 0 0 30px;
     height: 18px;
     position: relative;
-    z-index: 10;
+    z-index: 5;
   }
   .icon-menu span,
   .icon-menu:before,
@@ -126,6 +129,7 @@ body {
   }
   .menu__body {
     position: fixed;
+    z-index: 4;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -139,6 +143,7 @@ body {
     content: "";
     width: 100%;
     position: fixed;
+    z-index: 5;
     top: 0;
     left: -100%;
     height: 70px;
@@ -171,6 +176,127 @@ body {
 @media (max-width: 991.98px) {
   .menu__list {
     gap: 60px;
+  }
+}
+/* ================================================================================ */
+/* ======================================== Main ======================================== */
+.main-block {
+  position: relative;
+}
+.main-block__container {
+  min-height: 100vh;
+  padding-top: 88px;
+  padding-bottom: 88px;
+  position: relative;
+  z-index: 1;
+}
+.main-block__row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.main-block__title {
+  font-family: "Rosewind";
+  text-align: center;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  color: #0f0606;
+  max-width: 525px;
+}
+.main-block__body {
+  display: flex;
+  flex-direction: column;
+}
+.main-block__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.55;
+  letter-spacing: 0.07em;
+  color: #262323;
+  margin-bottom: 33px;
+  max-width: 560px;
+}
+.main-block__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #262323;
+  border-radius: 32px;
+  padding: 14px 53px;
+  max-width: 267px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #262323;
+  transition: all 0.3s ease;
+}
+.main-block__button:hover {
+  backdrop-filter: blur(10px);
+}
+.main-block__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 991.98px) {
+  .main-block__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .main-block__row {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .main-block__body {
+    display: block;
+  }
+  .main-block__background {
+    opacity: 0.9;
+  }
+  .main-block__title {
+    font-size: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-block__title {
+    font-size: 75px;
+  }
+  .main-block__text {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 470.98px) {
+  .main-block__title {
+    font-size: 65px;
+    line-height: 1.35;
+    margin-bottom: 25px;
+  }
+  .main-block__button {
+    display: flex;
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
+@media (max-width: 425.98px) {
+  .main-block__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .main-block__title {
+    font-size: 50px;
+  }
+  .main-block__text {
+    margin-bottom: 25px;
+    max-width: none;
   }
 }
 /* ================================================================================ */
