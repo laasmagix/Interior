@@ -415,6 +415,103 @@ body {
     margin-bottom: 20px;
   }
 }
+/* ======================================== Why ======================================== */
+.page__why {
+}
+.why {
+  padding-bottom: 100px;
+}
+.why__container {
+}
+.why__title {
+  margin-bottom: 20px;
+}
+.why__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0px, 400px));
+  padding-top: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  column-gap: 57px;
+  row-gap: 25px;
+  justify-content: end;
+}
+.why__list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  top: 0px;
+  left: 0px;
+}
+.why__item {
+  list-style-type: disc;
+}
+.item-why {
+}
+.item-why__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.item-why__text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #424141;
+}
+.why__image {
+}
+.why__image img {
+  width: 100%;
+  border-radius: 20px;
+}
+@media (max-width: 991.98px) {
+  .why__list {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 60px;
+    margin-bottom: 100px;
+    row-gap: 25px;
+    justify-content: end;
+  }
+  .why__item {
+    list-style: none;
+  }
+  .item-steps__title {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .why {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .why__list {
+    row-gap: 30px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .item-why__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 425.98px) {
+  .why {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .why__list {
+    row-gap: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .item-why__title {
+    margin-bottom: 10px;
+  }
+}
+/* ================================================================================ */
 /* ================================================================================ */
 /* ======================================== Steps ======================================== */
 .page__steps {
@@ -425,6 +522,7 @@ body {
 .steps__container {
 }
 .steps__title {
+  margin-bottom: 20px;
 }
 .title {
 }
@@ -449,7 +547,6 @@ body {
 .steps__item {
 }
 .item-steps {
-  /* max-width: 430px; */
 }
 .item-steps__title {
   font-weight: 300;
@@ -474,7 +571,7 @@ body {
     justify-content: center;
   }
   .item-steps__title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 767.98px) {
@@ -500,9 +597,6 @@ body {
     row-gap: 20px;
     padding-top: 20px;
     margin-bottom: 20px;
-  }
-  .item-steps__title {
-    font-size: 20px;
   }
 }
 /* ================================================================================ */
