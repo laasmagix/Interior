@@ -5,10 +5,10 @@
 @font-face {
   font-family: "Rosewind";
   src: url(/fonts/rosewind/Rosewind-Regular.otf);
+  font-weight: 400;
 }
 body {
   font-family: "Mulish";
-  background-color: #000;
 }
 .wrapper {
   min-height: 100%;
@@ -32,6 +32,20 @@ body {
   left: 0;
   object-fit: cover;
 }
+/* ======================================== BEM Blocks/Elements ======================================== */
+.title {
+  font-family: "Rosewind";
+  font-size: 30px;
+  line-height: 1.55;
+  color: #262323;
+  text-transform: uppercase;
+}
+@media (max-width: 425.98px) {
+  .title {
+    font-size: 26px;
+  }
+}
+/* ================================================================================ */
 /* ======================================== Page ======================================== */
 .page {
   flex: 1 1 auto;
@@ -68,8 +82,10 @@ body {
 }
 .menu__item {
 }
-.menu__item:hover {
-  list-style: disc;
+@media (min-width: 767.98px) {
+  .menu__item:hover {
+    list-style: disc;
+  }
 }
 .menu__link {
   font-weight: 400;
@@ -153,7 +169,7 @@ body {
   }
   .menu__list {
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
@@ -161,6 +177,9 @@ body {
   }
   .menu__link {
     font-size: 32px;
+  }
+  .menu__link:hover {
+    text-decoration: underline;
   }
   .header__container {
     min-height: 60px;
@@ -175,7 +194,7 @@ body {
 }
 @media (max-width: 991.98px) {
   .menu__list {
-    gap: 60px;
+    gap: 45px;
   }
 }
 /* ================================================================================ */
@@ -205,6 +224,7 @@ body {
   flex-direction: column;
   color: #0f0606;
   max-width: 525px;
+  text-transform: uppercase;
 }
 .main-block__body {
   display: flex;
@@ -259,9 +279,6 @@ body {
   .main-block__body {
     display: block;
   }
-  .main-block__background {
-    opacity: 0.9;
-  }
   .main-block__title {
     font-size: 80px;
   }
@@ -297,6 +314,98 @@ body {
   .main-block__text {
     margin-bottom: 25px;
     max-width: none;
+  }
+}
+/* ================================================================================ */
+/* ======================================== Style ======================================== */
+.page__style {
+}
+.style {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.style__container {
+}
+.style__title {
+  max-width: 622px;
+  margin-bottom: 20px;
+}
+.style__list {
+  display: flex;
+  column-gap: 60px;
+  position: relative;
+  padding-top: 50px;
+  justify-content: flex-end;
+  margin-bottom: 100px;
+}
+.style__list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  top: 0px;
+  left: 0px;
+}
+.style__item {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #424141;
+}
+.item-style {
+}
+.item-style__text {
+  max-width: 473px;
+}
+.style__images {
+  display: flex;
+  column-gap: 35px;
+  justify-content: center;
+}
+.style__image {
+  width: 100%;
+}
+.style__image img {
+  width: 100%;
+  border-radius: 20px;
+}
+@media (max-width: 991.91px) {
+  .style__images {
+    display: flex;
+    row-gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .style {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .style__list {
+    row-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .item-style__text {
+    max-width: none;
+  }
+}
+@media (max-width: 425.98px) {
+  .style {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .style__list {
+    row-gap: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .style__images {
+    row-gap: 20px;
   }
 }
 /* ================================================================================ */
